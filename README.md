@@ -11,7 +11,7 @@ Inputs:
 - `output_dir`: name of desired output directory
 - `sample_name`: name of sample, used to generate intermediate and output files
 - `ref_fasta`: Reference genome (FA file) 
-- `chr`: specified region chromosome (eg `CHR1`)
+- `chr`: specified region chromosome
 - `region_start`: starting coordinate of specified region, specified as an integer
 - `region_end`: ending coordinate of specified region, specified as an integer
   
