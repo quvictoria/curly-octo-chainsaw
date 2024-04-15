@@ -20,12 +20,12 @@ Steps:
 2. Count merged reads (`count_merge_reads()`): Counts # of reads in the resulting merged FASTQ file. 
 3. Aligning reads (`align_reads()`): Takes merged FASTQ files and aligns to the specified genome reference FA file using `bbmap`. Creates intermediate SAM file, converts SAM to BAM format, sorts and indexes BAM file. 
 4. Count aligned reads (`count_aligned_reads()`): Counts # of reads in the intermediate SAM file. 
-5. Count reads of interest (`count_reads_in_region()`):  Obtains counts of aligned reads within target region, aligned reads within target region that contain deletions (`contains_deletion()`), and lengths of deletions within target regions. To see if a read contains a deletion.
+5. Count reads of interest (`count_reads_in_region()`):  Obtains counts of aligned reads within target region, aligned reads within target region that contain deletions (`contains_deletion()`), and lengths of deletions within target regions to see if a read contains a deletion.
 6. Calculate deletion frequency: (# of reads containing deletions / # of reads within region) *100. 
 7. Plot and save histogram of deletion lengths for sample. 
 
 ## Future Work
-The approach presented here is rather simple, as it only identifies deletions within reads but ignores other editing results such as insertions or substitutions and neglects storage of deletion sequences. Expanding on the currently existing functions in the script, I could add additional logic to capture insertions and substitutions. This would provide a more holistic view of the editing implications for downstream analysis.
+The approach presented here is rather simple, as it only identifies deletions within reads but ignores other editing results such as insertions or substitutions and neglects storage of deletion sequences. Expanding on the currently existing functions in the script, I could add additional logic to capture insertions and substitutions. This would provide a more detailed view of the editing implications for downstream analysis.
 
 For an even more complex approach with inspiration from Crispresso2 from the Pinello lab ([ref](https://github.com/pinellolab/CRISPResso2)), I would generate an allele frequency table of all aligned reads. To do so, we can: 
 - Add in additional parameters for amplicon sequence instead of target region coordinates.
